@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import firebase from 'firebase';
+
+var config = {
+  apiKey: "AIzaSyDfE5xBKUU-4vcbg3G3gnnhBwDT73MfJlI",
+  authDomain: "nailed-7abe9.firebaseapp.com",
+  databaseURL: "https://nailed-7abe9.firebaseio.com",
+  storageBucket: "nailed-7abe9.appspot.com",
+};
+firebase.initializeApp(config);
 
 class App extends Component {
   constructor(){
