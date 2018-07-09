@@ -7,7 +7,9 @@ class Auth extends Component {
 
   signIn(provider){      
       //var provider = new auth.GoogleAuthProvider();      
-      auth().signInWithPopup(provider);
+      auth().signInWithPopup(provider).catch(function(error) {
+        alert(error.message);
+      });
   }
     
   render() {
