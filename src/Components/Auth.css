@@ -1,0 +1,15 @@
+.SignWithBtn {
+    border: 1px solid #dadada;
+    border-radius: 8px;
+    width: 240px;
+    background: #fdfdfd;
+    margin: auto;
+    font-size: 34px;
+    padding: 10px;
+    color: #525252;
+    margin-top: 4px;
+}
+.SignWithBtn:hover {
+    border-radius: 8px 8px 0 0;
+    border-bottom-color: #828282;
+}
