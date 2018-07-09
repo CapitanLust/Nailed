@@ -1,49 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import firebase from 'firebase';
-
-var config = {
-  apiKey: "AIzaSyDfE5xBKUU-4vcbg3G3gnnhBwDT73MfJlI",
-  authDomain: "nailed-7abe9.firebaseapp.com",
-  databaseURL: "https://nailed-7abe9.firebaseio.com",
-  storageBucket: "nailed-7abe9.appspot.com",
-};
-firebase.initializeApp(config);
+import Feed from './Components/Feed';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      nails: [['DS','Today ive started work at Nail'],['DU','Today iv2e started work at Nail']]
-    };
-  }
-
   render() {
     return (
       <div className="App">
         <div className="Screen">
-          <div className="Container">
-            {this.state.nails.map( (nail) => 
-              <Nail author={nail[0]} message={nail[1]}/>
-            )}
+          <div className="Container">            
+            <Feed/>
           </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-class Nail extends Component {
-  render(){
-    return(
-      <div className="Nail">
-        <div className="Author">
-          <div className="Avatart"><p>{this.props.author}</p></div>
-        </div>
-        <div className="Message"><p>{this.props.message}</p></div>
-        <div className="Like">
-          <div className="HeartSim"/>
         </div>
       </div>
     );
